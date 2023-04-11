@@ -1,0 +1,127 @@
+.peinture_section  {
+    height: 2200px;
+    background-image: linear-gradient(#c0c0c0, #654321);
+    margin-top: 150px;
+}
+
+.tabButtons {
+    margin-bottom: 100px;
+}
+
+.tabButtons button {
+    font-family: 'Times New Roman';
+    font-size: 28px;
+    padding: 10px 16px;
+    margin: 15px 15px;
+    border-radius: 8px;
+    background-color: #c0c0c0;
+    color: #000;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.tabButtons button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23), inset 0 0 100px rgba(255, 255, 255, 0.3);   
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.peinture {
+    width: 1000px;
+    border-radius: 300px;
+
+    animation:peintureEntrance 2s;
+}
+
+@keyframes peintureEntrance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.descriptions {
+    width: 500px;
+    margin-left: 50px;
+    overflow-x: hidden;
+}
+
+.description_title {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 42px;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    text-align: left;
+    font-weight: bold;
+    animation: titleEntrance 1s;
+}
+
+@keyframes titleEntrace {
+    0% {
+        opacity: 0;  
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.description_list ul {
+    list-style: none;
+    margin: 10;
+    padding: 10;
+}
+
+.description_list li {
+    padding: 8px 16px;
+    text-align: left;
+    font-family: 'Gill Sans';
+    font-size: 28px;
+    color: #000000;
+    opacity: 1;
+    animation: textEntrace 1s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.description_list li:nth-child(0) {
+    animation-delay: 0s;
+}
+
+.description_list li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.description_list li:nth-child(2) {
+    animation-delay: 0.4s;
+
+}
+.description_list li:nth-child(3) {
+    animation-delay: 0.4s;
+}
+@keyframes textEntrace {
+    0% {
+        transform: translatex(350px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translatex(40px);
+    }
+
+    100% {
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+
+.description_list li:last-child {
+    border-bottom: none;
+}
